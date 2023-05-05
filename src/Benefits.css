@@ -1,0 +1,49 @@
+.benefits{
+    width:100%;
+    margin-top: 0px;
+    padding:6rem 1rem;
+    
+
+}
+.card-container{
+    max-width: 1140px;
+    margin:6rem 0rem 4rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 40px;
+}
+.card{
+    /* border:1px solid black; */
+    padding:1rem;
+}
+.card h3{
+    font-size:1rem;
+    padding:0rem;
+    text-align: center;
+    
+
+}
+.img{
+    height:70px;
+    width:70px;
+    margin-left:35%;
+    margin-top:30px;
+
+}
+.card p{
+    padding:10px 0px;
+    text-align: center;
+
+}
+.card:hover{
+ background-color: #04b1d9;
+
+}
+@media screen and (max-width:740px){
+    .card-container{
+        max-width: 90%;
+        margin: auto;
+        grid-template-columns: 1fr;
+        
+    }
+}
