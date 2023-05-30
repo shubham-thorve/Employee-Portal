@@ -1,0 +1,210 @@
+/* @media (min-width: 250px) and (max-width: 400px) {
+    .todo-header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        width: 100%;
+        margin-top: 1rem;
+}
+} */
+
+@media only screen and (max-width:400px) {
+    .todo-header {
+        font-size: 10px;
+        width:100%
+    }
+
+    .todo-header-st {
+        margin-left: 12px;
+    }
+
+    .show-calendar-button {
+
+        font-size: 10px;
+
+    }
+
+    .todo-input-container input,
+    .todo-input-container button {
+
+        margin-top: 1rem;
+
+        font-size: 10px;
+
+        border-radius: 20%;
+
+    }
+
+    .todo-card{
+        width: inherit;
+        margin-left: 0%;
+    }
+
+    .todo-cards-container{
+        width: inherit;
+    }
+
+    .todo-task-start-time{
+        margin-left: 20px;
+    }
+    .todo-task-start-title{
+        margin-left: 20px;
+    }
+    .todo-input-container{
+        width: 100%;
+    }
+
+}
+
+/* @media only screen and (width:412px){
+    .todo-header-st{
+        word-wrap: break-word;
+    }
+} */
+
+@media only screen and (max-width: 542px){
+
+    .todo-card .todo-card-content button {
+
+        margin-bottom: 5px;
+    }
+}
+
+@media only screen and (min-width: 401px) and (max-width: 600px) {
+    /* .todo-input-container {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 17px; 
+    } */
+
+    .todo-input-container input,
+    .todo-input-container button {
+        margin-top: 1rem;
+    }
+
+    input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top: 1rem;
+        margin: auto;
+    }
+
+    input[type="time"] {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .todo-tooltip {
+        margin: auto;
+    }
+
+    .show-calendar-button {
+        /* margin-right: 0; */
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .todo-header {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        top: 248px;
+        left: 0;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    /* .todo-header-tc {
+        display: none;
+    } */
+
+    .todo-header-r {
+        margin-left: 0;
+    }
+
+    .todo-header-e {
+        margin-left: 20px;
+    }
+
+    .todo-card {
+        width: 94%;
+    }
+
+    /* .todo-task-start-time {
+        display: none;
+    } */
+
+    .todo-title {
+        font-size: 24px;
+    }
+
+    .calendar-container {
+        position: absolute;
+        top: -39px;
+        left: 110px;
+        font-size: 11px;
+        width: 217px;
+        margin: 240px auto 20px;
+        z-index: 100;
+    }
+
+    .todo-cards-container {
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+        margin-top: 17px;
+    }
+
+    .horizontal {
+        margin-right: -25px;
+    }
+
+    .todo-task-start-time{
+        margin-left: 20px;
+    }
+    .todo-task-start-title{
+        margin-left: 20px;
+    }
+    .todo-input-container{
+        width: max-content;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+    .todo-header {
+        width: 95%;
+        left: 5%;
+    }
+
+    .todo-card {
+        width: 575px
+    }
+
+    .todo-header-tn {
+        margin-left: 35px;
+    }
+
+    .todo-header-st {
+        margin-left: 35px;
+    }
+}
+
+@media only screen and (min-width: 901px) and (max-width: 1200px) {
+    .todo-header {
+        width: 73%;
+        left: 10%;
+    }
+
+    .todo-card {
+        width: 650px;
+        left: 7px;
+    }
+}
+
+@media only screen and (min-width: 1201px) {
+    .todo-header {
+        width: 56%;
+        left: 15%;
+    }
+
+    .todo-card {
+        width: 650px;
+    }
+}

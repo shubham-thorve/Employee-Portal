@@ -1,0 +1,141 @@
+	.st1 {
+		margin-left: 28%;
+	}
+
+	.container-fluid2 {
+		/* background-image: url('.././Images/cmp4.jpg'); */
+		background-repeat: no-repeat;
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		/* opacity: 0.1; */
+
+		/* top: 0; */
+		/* left: 0; */
+	}
+
+	.background2-container {
+		width: 100%;
+		height: 100%;
+		background-image: url('.././Images/cmp4.jpg');
+		background-size: cover;
+		opacity: 0.2;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: -1;
+	}
+
+	.st {
+		background-color: rgb(238, 231, 231);
+		border-radius: 2%;
+		font-size: 16px;
+		box-shadow: 10px 10px 5px rgb(61, 183, 223);
+		/* margin-left: 600PX;
+    margin-top: -450px; */
+	}
+
+	.h2 {
+		text-shadow: 2px 2px gainsboro;
+	}
+
+	.card-body {
+		-moz-box-shadow: 0 0 5px #888;
+		-webkit-box-shadow: 0 0 5px#888;
+		box-shadow: 0 0 5px #888;
+	}
+
+
+	@media (min-width: 300px) {
+		.st1 {
+			margin-left: 47%;
+		}
+
+
+		.container-fluid2 {
+			background-image: url('.././Images/cmp4.jpg');
+			background-repeat: no-repeat;
+			width: 100%;
+			height: 42 rem;
+			background-size: cover;
+
+			/* opacity: 0.1; */
+			/* top: 0; */
+			/* left: 0; */
+
+		}
+
+		.st {
+			background-color: rgb(238, 231, 231);
+			border-radius: 2%;
+			font-size: 16px;
+			box-shadow: 10px 10px 5px rgb(61, 183, 223);
+			padding: 45px 40px 45px 40px;
+			/* margin-left: 600PX;
+		
+		    margin-top: -450px; */
+		}
+
+		.h2 {
+			text-shadow: 2px 2px gainsboro;
+		}
+
+		.card-body {
+			-moz-box-shadow: 0 0 5px #888;
+			-webkit-box-shadow: 0 0 5px#888;
+			box-shadow: 0 0 5px #888;
+		}
+	}
+
+	@media(max-width:300px) {
+		.st1 {
+			margin-left: 47%;
+		}
+
+		.container-fluid2 {
+			background-image: url('.././Images/cmp4.jpg');
+			background-repeat: no-repeat;
+			width: 100%;
+			background-size: cover;
+
+			/* opacity: 0.1; */
+
+
+
+
+			/* top: 0; */
+
+			/* left: 0; */
+		}
+
+		.st {
+			background-color: rgb(238, 231, 231);
+			border-radius: 2%;
+			font-size: 16px;
+			box-shadow: 10px 10px 5px rgb(61, 183, 223);
+
+			/* margin-left: 600PX;
+		
+		    margin-top: -450px; */
+		}
+
+		.h2 {
+			text-shadow: 2px 2px gainsboro;
+		}
+
+		.card-body {
+			-moz-box-shadow: 0 0 5px #888;
+			-webkit-box-shadow: 0 0 5px#888;
+			box-shadow: 0 0 5px #888;
+		}
+
+		.container-fluid2 {
+			height: 90rem;
+		}
+	}
+
+	@media (min-height: 800px) {
+		.container-fluid2 {
+			height: 70rem;
+		}
+	}

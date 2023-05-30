@@ -1,0 +1,224 @@
+.todo-cards-container {
+    margin-top: 8px;
+    padding-top: 15px;
+    /* background-color: #F0F0F0; */
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* border: 1px solid black; */
+    position: relative;
+
+}
+
+.todo-cards-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    background-color: #F5F5F5;
+}
+
+.todo-cards-container::-webkit-scrollbar {
+    width: 2px;
+    background-color: #F5F5F5;
+}
+
+.todo-cards-container::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border: 2px solid #555555;
+}
+
+
+.todo-card {
+    width: 700px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    /* margin-bottom: 16px; */
+    padding: 7px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+
+	background-color: #fff;
+	
+	/* strong {
+		font-weight: 600;
+		color: #754D42;
+	} */
+
+}
+	
+	.todo-inner-card {
+		padding: 10px;
+		padding-top: 10px;
+		background-color: #0A4D68;
+		border-radius: 12px;
+	position: relative;
+		overflow: hidden;
+	}
+
+
+.todo-card:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-card .todo-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.todo-task-start-time {
+    color: white;
+    /* position: absolute; */
+    top: 50%;
+    left: 48px;
+    transform: translateY(-2%);
+    font-size: 13px;
+}
+
+.todo-task-start-title {
+    width: 50%;
+    color: white;
+    /* position: absolute; */
+    top: 40%;
+    left: 158px;
+    transform: translateY(-2%);
+    word-wrap: break-word;
+    font-size: 13px;
+
+}
+
+.todo-card .todo-card-content span {
+    display: block;
+    font-size: 20px;
+
+}
+
+.todo-card .todo-card-content input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+    height: 31px;
+}
+
+.todo-card .todo-card-content input[type="text"]:focus {
+    border-bottom-color: rgb(95, 234, 231);
+    outline: none;
+}
+
+/* .todo-card .todo-card-content .buttons {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.todo-card .todo-card-content button {
+    background-color: #ff6d1f;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-card .todo-card-content button:hover {
+    background-color: #efd244;
+}
+
+.todo-card .todo-card-content .modify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.todo-card .todo-card-content .modify-container input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 5px;
+    width: 100%;
+}
+
+.todo-card .todo-card-content .modify-container input[type="text"]:focus {
+    border-bottom-color: #3c1bc2;
+    outline: none;
+}
+
+/* .todo-card .todo-card-content .modify-container .buttons {
+    display: flex;
+    justify-content: flex-end;
+} */
+
+.checkbox-container {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.todo-card-text {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.completed {
+    text-decoration: line-through;
+    /* background-color: hsl(131, 33%, 41%); */
+    background-color:    #00CC99;
+    color: #000;
+}
+
+/* Unchecked checkbox */
+input[type="checkbox"] {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    background-color: #3d20af;
+    border: 2px solid #3d20af;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Checked checkbox */
+/* input[type="checkbox"]:checked {
+    background-color: #fff;
+    border: 2px solid #ac28e1;
+} */
+
+/* Checkmark */
+input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 8px;
+    height: 13px;
+    border: solid #9d8ddb;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    animation: checkmark 0.3s ease-in-out;
+}
+
+/* Animation */
+@keyframes checkmark {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) rotate(45deg) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) rotate(45deg) scale(1);
+    }
+}

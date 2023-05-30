@@ -1,0 +1,73 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .login_cont {
+    background-image: url("../../images/AuthBG.jpg");
+    background-size: cover;
+    height: 100vh;
+    overflow: scroll;
+    font-family: "Raleway", sans-serif;
+  }
+  .login_card_container {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 1.5rem;
+    margin-top: 100px;
+    z-index: 10;
+    margin-bottom: 30px;
+  }
+  .login_form_container {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  
+    padding: 0.5rem;
+    z-index: 10;
+    background-color: whitesmoke;
+  }
+  .card {
+    color: black !important;
+  }
+  
+  .login_btn {
+    background-color: #ff6d1f;
+    border: none;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+  }
+  .login_btn:hover {
+    background-color: #efd244;
+  }
+  @media screen and (max-width:300px){
+      .login_btn {
+          margin: 4px;
+      }
+  }
+  @media screen and (min-width:390px ){
+      .login_card_container {
+          margin-top: 190px;
+      }
+  
+  }
+  @media screen and (min-width:300px ){
+      .login_card_container {
+          margin-top: 160px;
+      }
+  
+  }
+  

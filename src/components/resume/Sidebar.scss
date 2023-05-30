@@ -1,0 +1,86 @@
+.resume-sidebar {
+  background: #aac0d5;
+  color: #000000;
+  min-height:100vh;
+  height: 100%;
+  width: 200px;
+  transition: all 0.5s;
+}
+
+.resume-top_section {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+
+.resume-mid_section {
+  flex-direction: column;
+  align-items: center;
+}
+
+.resume-mid_section img {
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  transition: all 1s ease-in-out;
+}
+
+.resume-mid_section h3 {
+  margin: 10px 34px;
+}
+
+.resume-logo {
+  font-size: 30px;
+}
+
+.resume-bars {
+  display: flex;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.resume-link {
+  display: flex;
+  color: #000000;
+  padding: 10px 15px;
+  gap: 15px;
+  transition: all 0.5s;
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  background: #f15120;
+  color: #ffffff;
+  transition: all 0.5s;
+}
+
+.active {
+  background: #f15120;
+  color: #ffffff;
+}
+
+.resume-icon,
+.resume-link_text {
+  font-size: 15px;
+  transition: all 0.5s;
+}
+
+.resume-social-links {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  a {
+    font-size: 15px;
+    transition: all 0.5s;
+    justify-content: space-between;
+  }
+}
+
+.resume-username{
+  margin-top: 0.5rem;
+  color: #541907;
+  font-weight: bold;
+}

@@ -1,0 +1,187 @@
+html::-webkit-scrollbar {
+    display: none;
+    /* Set the width of the scrollbar */
+}
+
+.todo-background {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../images/Time-Task-Management.jpg');
+    background-size: cover;
+    opacity: 0.2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.todo-title {
+    text-align: center;
+}
+
+.todo-selected-date {
+
+    padding: 10px;
+    font-weight: bold;
+}
+
+.todo-container {
+
+    /* overflow: hidden; */
+    width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100vh;
+    /* Ensures the container takes up the full height of the viewport */
+    
+
+}
+
+
+.todo-input-container {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.show-calendar-button {
+    margin-right:2%;
+    width: fit-content;
+    background-color: #ea791c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 9px;
+    padding: 10px;
+    padding-top: 2px;
+    margin-top: 3px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.show-calendar-button:hover {
+    background-color: #9d8ddb;
+}
+
+.todo-input-container input[type="text"] {
+    width: 75%;
+    height: 1px;
+    padding: 3%;
+    border-radius: 5px;
+    border: 2px solid #ccc;
+    font-size: 16px;
+    transition: all 0.3s;
+    align-items: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #3197d6;
+    box-shadow: 0 0 10px #3197d6;
+}
+
+input[type="time"] {
+    font-size: 16px;
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: none;
+    outline: none;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.todo-tooltip {
+    position: relative;
+    width: fit-content;
+    background-color: #ea791c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 16px;
+    padding: 4px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    }
+    
+    .todo-tooltip:hover {
+    background-color: #bc2587;
+    }
+    
+    .todo-tooltip .todo-icon {
+    margin-right: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    }
+    
+    .todo-tooltip .todo-tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: rgb(79, 33, 50);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    }
+    
+    .todo-tooltip:hover .todo-tooltiptext {
+    visibility: visible;
+    opacity: 0.8;
+    }
+
+.todo-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+    /* grid-gap: 10px; */
+    /* position: absolute; */
+    top: 299px;
+    font-size: small;
+    left: 27%;
+    width: 700px;
+    padding: 5px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #ddd;
+    /* display: flex; */
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    /* ensure it's above the cards container */
+    margin-top: 16px;
+    border: 1px solid black;
+}
+
+.todo-header span {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.todo-header-tc {
+    width: 10px;
+    /* font-size: small;   
+    left: 20px; */
+}
+
+.todo-header-e {
+    margin-left: 76px;
+}
+
+.todo-header-r {
+    margin-left: 30px;
+}
+
+
+
+

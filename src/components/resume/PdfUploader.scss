@@ -1,0 +1,125 @@
+.resume-main-container{
+  width: 100%;
+}
+
+
+.resume-button {
+  background-color: #ff6d1f;
+
+  border: none;
+
+  border-radius: 5px;
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 14px;
+
+  padding: 5px 10px;
+
+  margin-right: 20px;
+
+  text-transform: uppercase;
+
+  transition: all 0.2s ease-in-out;
+}
+
+.resume-button:hover {
+  background-color: #efd244;
+  color: black;
+}
+.resume-btnup {
+  height: 40px;
+  width: 100px;
+}
+
+.resume-inp {
+  position: relative;
+  width: 200px;
+  height: 46px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.resume-upload-div {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: auto;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3rem;
+}
+
+.resume-upload-icon{
+  padding-right:10px;
+}
+.resume-file-card {
+  background-color: #edf2f7;
+  border: 3px dashed #cbd5e0;
+  padding: 1em;
+  width: 380px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.resume-file-card .resume-file-inputs button {
+  width: 120px;
+  height: 40px;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #f55e30;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  transition: background-color 0.4s;
+  box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.5);
+}
+
+.resume-common {
+  padding-top: 15px;
+}
+
+.resume-info {
+  font-style: italic;
+  margin-bottom: 0rem;
+}
+
+
+// .resume-button:active {
+//   transform: scale(0.95);
+// }
+
+.resume-dwnldbtn {
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .resume-file-card {
+    width: 280px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-file-card {
+    width: 280px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 300px) {
+  .resume-file-card {
+    width: 160px;
+    height: 120px;
+  }
+}
