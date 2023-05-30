@@ -21,6 +21,7 @@ const Login = () => {
   const navigate = useNavigate();
   let token;
   let userEmail;
+  let gitdemo;
 
   const fetchName = () => {
     return new Promise((resolve, reject) => {
