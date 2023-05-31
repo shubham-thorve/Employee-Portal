@@ -1,0 +1,1 @@
+ALTER TABLE employeeportal2.profile_details MODIFY COLUMN document_file longblob;
