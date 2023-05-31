@@ -5,6 +5,8 @@ import axios from "axios";
 import swal from "sweetalert2";
 import Sidebar from "./Sidebar";
 
+//added this comments for understanding git
+
 function PdfUploader() {
   const [pdfFile, setPdfFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState("");
