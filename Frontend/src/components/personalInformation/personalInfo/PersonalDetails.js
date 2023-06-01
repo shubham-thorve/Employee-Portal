@@ -44,8 +44,8 @@ const ListEmployeeComponent = () => {
 		try {
 			const formData = new FormData();
 			formData.append('file', file);
-			const token = localStorage.getItem("jwtToken");
-			const email = localStorage.getItem("email");
+			const token = sessionStorage.getItem("jwtToken");
+			const email = sessionStorage.getItem("email");
 			axios
 				.put(`http://localhost:8085/employeeportal-service/personalinfo/profilephoto/` + email, formData,
 					{

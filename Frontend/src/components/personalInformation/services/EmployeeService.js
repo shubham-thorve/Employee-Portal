@@ -7,7 +7,7 @@ class EmployeeService{
 
     getHeader(){
        
-        const token = localStorage.getItem("jwtToken");
+        const token = sessionStorage.getItem("jwtToken");
        return {
                 headers:{
                 Authorization: 'Bearer ' + token
@@ -18,7 +18,7 @@ class EmployeeService{
 
      getEmailId(){
         
-        return localStorage.getItem("email");
+        return sessionStorage.getItem("email");
      }
 
     getAllEmployees(){
