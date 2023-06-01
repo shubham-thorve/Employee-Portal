@@ -7,7 +7,7 @@ const Todo = () => {
   // const auth = useAuth();
   const navigate = useNavigate();
   const handleLogout = () => {
-    localStorage.clear()
+    sessionStorage.clear()
     navigate("/");
   };
   return (
