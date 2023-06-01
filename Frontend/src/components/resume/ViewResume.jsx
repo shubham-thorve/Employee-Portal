@@ -23,8 +23,8 @@ function ViewResume() {
 
   const fetchData = async () => {
     try {
-      const token = localStorage.getItem("jwtToken");
-      const email = localStorage.getItem("email");
+      const token = sessionStorage.getItem("jwtToken");
+      const email = sessionStorage.getItem("email");
       const response = await axios.get(`http://localhost:8085/employeeportal-service/profile/` + email + `/filename`,
         {
           headers: {
@@ -39,8 +39,8 @@ function ViewResume() {
 
   const handleDownload = async () => {
     try {
-      const token = localStorage.getItem("jwtToken");
-      const email = localStorage.getItem("email");
+      const token = sessionStorage.getItem("jwtToken");
+      const email = sessionStorage.getItem("email");
       const response = await axios.get(`http://localhost:8085/employeeportal-service/profile/` + email + `/downloadFile`, {
         responseType: 'arraybuffer',
 
@@ -81,8 +81,8 @@ function ViewResume() {
     try {
       const formData = new FormData();
       formData.append('documentFile', file);
-      const token = localStorage.getItem("jwtToken");
-      const email = localStorage.getItem("email");
+      const token = sessionStorage.getItem("jwtToken");
+      const email = sessionStorage.getItem("email");
       axios
         .put(`http://localhost:8085/employeeportal-service/profile/` + email, formData,
           {

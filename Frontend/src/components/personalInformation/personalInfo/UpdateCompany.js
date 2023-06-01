@@ -135,7 +135,7 @@ const AddCompanyComponent = () => {
 			.then((response) => {
 				setEmployeeId(response.data.employeeId);
 			});
-		// const email = localStorage.getItem("email");
+		// const email = sessionStorage.getItem("email");
 		// console.log(email);
 		CompanyService.getCompanyById(id)
 			.then((response) => {
