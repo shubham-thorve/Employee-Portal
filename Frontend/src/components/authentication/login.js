@@ -21,7 +21,7 @@ const Login = () => {
   const navigate = useNavigate();
   let token;
   let userEmail;
-  let gitdemo;
+
 
   const fetchName = () => {
     return new Promise((resolve, reject) => {
@@ -91,7 +91,7 @@ const Login = () => {
   };
   const handlebutton = () => {
     navigate("/register");
-    fetchName();
+    // fetchName();
   };
   return (
     <div className="login_cont">
