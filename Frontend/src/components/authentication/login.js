@@ -21,14 +21,14 @@ const Login = () => {
   const navigate = useNavigate();
   let token;
   let userEmail;
-  let gitdemo;
+
 
   const fetchName = () => {
     return new Promise((resolve, reject) => {
       EmployeeService.getEmployeeById()
         .then((res) => {
           const userName = `${res.data.firstName} ${res.data.lastName}`;
-          localStorage.setItem("userName", userName);
+          sessionStorage.setItem("userName", userName);
           resolve(userName);
         })
         .catch((err) => reject(err));
@@ -71,8 +71,8 @@ const Login = () => {
         .then((res) => {
           token = res.data.jwtToken;
           userEmail = res.data.userName;
-          localStorage.setItem("jwtToken", token);
-          localStorage.setItem("email", userEmail);
+          sessionStorage.setItem("jwtToken", token);
+          sessionStorage.setItem("email", userEmail);
           fetchName()
             .then((userName) => {
               Swal.fire(`Hi ${userName}! Login Successful`);
@@ -91,7 +91,7 @@ const Login = () => {
   };
   const handlebutton = () => {
     navigate("/register");
-    fetchName();
+    // fetchName();
   };
   return (
     <div className="login_cont">

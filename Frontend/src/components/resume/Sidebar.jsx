@@ -100,7 +100,7 @@ const Sidebar = ({ children }) => {
           {/* {profileImg && ( */}
           <img className="resume-profile_pic" src={profileImg ? `data:image;base64,${profileImg}`: myimg } alt="Profile Pic not uploaded" />
           {/* )} */}
-          <p className="resume-username">{`${localStorage.getItem("userName")}`}</p>
+          <p className="resume-username">{`${sessionStorage.getItem("userName")}`}</p>
         </div>
 
         {menuItem.map((item, index) => (

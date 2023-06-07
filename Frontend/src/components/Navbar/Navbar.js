@@ -1,7 +1,7 @@
 import { Link, useNavigate, useLocation } from "react-router-dom";
 
 import "./NavbarStyles.css";
-import React, { useState} from "react";
+import React, { useState,useEffect } from "react";
 import Tippy from "@tippyjs/react";
 import "tippy.js/dist/tippy.css";
 import axios from "axios";
@@ -38,8 +38,8 @@ const Navbar = () => {
   // };
 
   const handleLogout = () => {
-    const token = localStorage.getItem("jwtToken");
-    const varEmail = localStorage.getItem("email");
+    const token = sessionStorage.getItem("jwtToken");
+    const varEmail = sessionStorage.getItem("email");
     console.log("logged out");
     axios
       .post(
@@ -55,14 +55,14 @@ const Navbar = () => {
       )
       .then((res) => {
         // setUserName("");
-        localStorage.clear();
+        sessionStorage.clear();
         // clearAllCookies();
         Swal.fire("Logout Successful");
         navigate("/");
       })
 
       .catch((err) => console.log(err));
-    localStorage.clear();
+    sessionStorage.clear();
     Swal.fire("Logout Successful");
     navigate("/");
   };
@@ -84,14 +84,19 @@ const Navbar = () => {
           src="https://tse2.mm.bing.net/th/id/OIP.GlnVhpILKika1QBHYP7s5gHaHa?w=191&h=192&c=7&r=0&o=5&dpr=1.5&pid=1.7"
         />
       </Link>
-      {localStorage.getItem("jwtToken") !==null && (
+      {sessionStorage.getItem("jwtToken") !== null && (
         <div>
           <Tippy content={`You have logged in to the Employee Portal`}>
-            <span className="username">{`Hi, ${localStorage.getItem("userName")} !`}</span>
+            <span className="username">{`Hi, ${sessionStorage.getItem(
+              "userName"
+            )} !`}</span>
           </Tippy>
         </div>
       )}
       <ul className={!click ? "nav-menu nav-menu-active" : "nav-menu"}>
+        {sessionStorage.getItem("jwtToken") != null && (
+          <AutoLogout logout={handleLogout} timeout={21600000} />
+        )}
         <li
           className={`${
             location.pathname === "/" ? "main-nav-active" : ""
@@ -103,6 +108,9 @@ const Navbar = () => {
             </Link>
           </Tippy>
         </li>
+        {sessionStorage.getItem("jwtToken") != null && (
+          <AutoLogout logout={handleLogout} timeout={21600000} />
+        )}
         <li
           className={`${
             location.pathname === "/personalinfo" ? "main-nav-active" : ""
@@ -114,7 +122,9 @@ const Navbar = () => {
             </Link>
           </Tippy>
         </li>
-
+        {sessionStorage.getItem("jwtToken") != null && (
+          <AutoLogout logout={handleLogout} timeout={21600000} />
+        )}
         <li
           className={`${
             location.pathname === "/viewResume" ? "main-nav-active" : ""
@@ -126,7 +136,9 @@ const Navbar = () => {
             </Link>
           </Tippy>
         </li>
-
+        {sessionStorage.getItem("jwtToken") != null && (
+          <AutoLogout logout={handleLogout} timeout={21600000} />
+        )}
         <li
           className={`${
             location.pathname === "/todo" ? "main-nav-active" : ""
@@ -139,20 +151,22 @@ const Navbar = () => {
           </Tippy>
           {/* <Todo isLoggedIn={this.props.isLoggedIn} /> */}
         </li>
-
+        {sessionStorage.getItem("jwtToken") != null && (
+          <AutoLogout logout={handleLogout} timeout={21600000} />
+        )}
         <li
           className={`${
             location.pathname === "/login" ? "main-nav-active" : ""
           } nav-item `}
         >
-          {localStorage.getItem("jwtToken") == null && (
+          {sessionStorage.getItem("jwtToken") == null && (
             <Tippy content="LOGIN">
               <Link to="/login" onClick={handleClick}>
                 <FaSignInAlt className="icons-nav" />
               </Link>
             </Tippy>
           )}
-          {localStorage.getItem("jwtToken") != null && (
+          {sessionStorage.getItem("jwtToken") != null && (
             <Tippy content="LOGOUT">
               <a onClick={handleLogout}>
                 <FaSignOutAlt className="icons-nav" />
@@ -173,3 +187,13 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const AutoLogout = ({ logout, timeout }) => {
+  useEffect(() => {
+    const timeoutId = setTimeout(logout, timeout);
+
+    return () => clearTimeout(timeoutId);
+  }, [logout, timeout]);
+
+  return null;
+};

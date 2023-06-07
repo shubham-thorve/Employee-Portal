@@ -29,8 +29,8 @@ function PdfUploader() {
 
     const formData = new FormData();
     formData.append("documentFile", file);
-    const token = localStorage.getItem("jwtToken");
-    const email = localStorage.getItem("email");
+    const token = sessionStorage.getItem("jwtToken");
+    const email = sessionStorage.getItem("email");
     axios
       .post(
         `http://localhost:8085/employeeportal-service/profile/`+email,
@@ -87,8 +87,8 @@ function PdfUploader() {
   };
 
   const handleDownloadButtonClick = () => {
-    const token = localStorage.getItem("jwtToken");
-    const email = localStorage.getItem("email");
+    const token = sessionStorage.getItem("jwtToken");
+    const email = sessionStorage.getItem("email");
     axios
       .get(
         `http://localhost:8085/employeeportal-service/profile/`+email+`/downloadFile`,
@@ -123,8 +123,8 @@ function PdfUploader() {
 
     const formData = new FormData();
     formData.append("documentFile", file);
-    const token = localStorage.getItem("jwtToken");
-    const email = localStorage.getItem("email");
+    const token = sessionStorage.getItem("jwtToken");
+    const email = sessionStorage.getItem("email");
     axios
       .put(
         `http://localhost:8085/employeeportal-service/profile/`+email,
