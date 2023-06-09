@@ -42,8 +42,8 @@ function TodoList() {
 
         console.log("todos GET Method call: useEffect() ");
         // Make an API call to get the todos for the selected createdDate
-        const token = localStorage.getItem("jwtToken");
-        const email = localStorage.getItem("email");
+        const token = sessionStorage.getItem("jwtToken");
+        const email = sessionStorage.getItem("email");
         console.log("Email Id: " + email);
 
         axios.get('http://localhost:8085/employeeportal-service/' + email + '/todos/' + yyyyMmDd,
@@ -102,8 +102,8 @@ function TodoList() {
         try {
             // Use the axios library to make a POST request to the server.
             // The response contains the new todo item.
-            const token = localStorage.getItem("jwtToken");
-            const email = localStorage.getItem("email");
+            const token = sessionStorage.getItem("jwtToken");
+            const email = sessionStorage.getItem("email");
             const response = await axios.post("http://localhost:8085/employeeportal-service/" + email + "/todos", todo,
                 {
                     headers: {
@@ -227,8 +227,8 @@ function TodoList() {
     const updateTodo = async (updatedTodo) => {
         console.log("input method");
         try {
-            const token = localStorage.getItem("jwtToken");
-            const email = localStorage.getItem("email");
+            const token = sessionStorage.getItem("jwtToken");
+            const email = sessionStorage.getItem("email");
             // Make a PUT request to update the todo item in the backend database
             const response = await axios.put('http://localhost:8085/employeeportal-service/' + email + '/todos', updatedTodo,
 
@@ -382,8 +382,8 @@ function TodoList() {
         }
 
         const todoId = item.todoId; // Get the id of the todo item from the todo item object
-        const token = localStorage.getItem("jwtToken");
-        const email = localStorage.getItem("email");
+        const token = sessionStorage.getItem("jwtToken");
+        const email = sessionStorage.getItem("email");
         // Send a request to the backend API to delete the todo item with the given id
         axios.delete(`http://localhost:8085/employeeportal-service/` + email + `/todos/${todoId}`,
             {

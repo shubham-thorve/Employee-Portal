@@ -6,7 +6,7 @@ class CompanyService{
 
      getHeader(){
        
-        const token = localStorage.getItem("jwtToken");
+        const token = sessionStorage.getItem("jwtToken");
        return {
                 headers:{
                 Authorization: 'Bearer ' + token
@@ -17,7 +17,7 @@ class CompanyService{
 
      getEmailId(){
         
-        return localStorage.getItem("email");
+        return sessionStorage.getItem("email");
      }
 
     getAllCompanys(){

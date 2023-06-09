@@ -4,7 +4,7 @@ import Swal from "sweetalert2";
 
 
 const PrivateRoute=({component: Component, ...rest})=>{
-  if(localStorage.getItem('jwtToken')!= null){
+  if(sessionStorage.getItem('jwtToken')!= null){
     return <Component {...rest}/>;
   }else{
     Swal.fire("Please Login First");
